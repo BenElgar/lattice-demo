@@ -1,6 +1,6 @@
 {
   "type": "ServiceCluster",
-  "name": "PublicHelloService",
+  "name": "PrivateHelloService",
 
   "parameters": {
     "PORT": {
