@@ -1,0 +1,17 @@
+{
+  "type": "System",
+  "name": "DemoSystem",
+
+  "subsystems": [
+    {
+      "$ref": {
+        "path": "PublicHelloService.json"
+      }
+    },
+    {
+      "$ref": {
+        "path": "PrivateHelloService.json"
+      }
+		}
+  ]
+}

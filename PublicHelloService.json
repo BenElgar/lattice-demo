@@ -1,0 +1,41 @@
+{
+  "type": "ServiceCluster",
+  "name": "PublicHelloService",
+
+  "parameters": {
+    "PORT": {
+      "default": 8888
+    },
+    "NUM_INSTANCES": {
+      "default": 1
+    }
+  },
+
+  "https": false,
+  "public": true,
+  "port": "${PORT}",
+  "numInstances": "${NUM_INSTANCES}",
+
+  "build": {
+    "repository": {
+      "url": "ssh://git@github.com/carbon-io/example__hello-world-service-chaining.git",
+      "commit": "48134731ba96a951553a78fd9ae71a3a15db0305"
+    },
+    "language": "node6.9.4",
+    "cmd": "npm install"
+  },
+
+  "exec": {
+    "cmd": "node",
+    "args": [
+			"lib/PublicHelloService",
+			"-p",
+			"${PORT}"
+		]
+  },
+
+  "resources": {
+    "instanceType": "t2.micro"
+  }
+}
+
