@@ -12,6 +12,6 @@
       "$ref": {
         "path": "PrivateHelloService.json"
       }
-		}
+    }
   ]
 }
