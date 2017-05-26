@@ -31,7 +31,10 @@
       "lib/PublicHelloService",
       "-p",
       "${PORT}"
-    ]
+    ],
+    "environment": {
+      "PRIVATE_HELLO_SERVICE_URL": "http://DemoSystem.PrivateHelloService.json"
+    }
   },
 
   "resources": {
