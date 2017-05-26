@@ -28,10 +28,10 @@
   "exec": {
     "cmd": "node",
     "args": [
-			"lib/PublicHelloService",
-			"-p",
-			"${PORT}"
-		]
+      "lib/PublicHelloService",
+      "-p",
+      "${PORT}"
+    ]
   },
 
   "resources": {

@@ -1,6 +1,6 @@
 {
   "type": "ServiceCluster",
-  "name": "PublicHelloService",
+  "name": "PrivateHelloService",
 
   "parameters": {
     "PORT": {
@@ -28,10 +28,10 @@
   "exec": {
     "cmd": "node",
     "args": [
-			"lib/PrivateHelloService",
-			"-p",
-			"${PORT}"
-		]
+      "lib/PrivateHelloService",
+      "-p",
+      "${PORT}"
+    ]
   },
 
   "resources": {
