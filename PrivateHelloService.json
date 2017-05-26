@@ -18,8 +18,8 @@
 
   "build": {
     "repository": {
-      "url": "ssh://git@github.com/carbon-io/example__hello-world-service-chaining.git",
-      "commit": "48134731ba96a951553a78fd9ae71a3a15db0305"
+      "url": "ssh://git@github.com/kevindrosendahl/example__hello-world-service-chaining.git",
+      "commit": "a716e6f5aa4de3ac05af613d8562ee833727169a"
     },
     "language": "node6.9.4",
     "cmd": "npm install"
