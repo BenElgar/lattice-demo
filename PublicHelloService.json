@@ -19,7 +19,7 @@
   "build": {
     "repository": {
       "url": "ssh://git@github.com/kevindrosendahl/example__hello-world-service-chaining.git",
-      "commit": "a716e6f5aa4de3ac05af613d8562ee833727169a"
+      "commit": "f1e0ec7719dfdbe6b3d1e27bb453da0ef1f634eb"
     },
     "language": "node6.9.4",
     "cmd": "npm install"
