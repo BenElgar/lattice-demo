@@ -1,0 +1,43 @@
+{
+  "type": "ServiceCluster",
+  "name": "PublicHelloService",
+
+  "parameters": {
+    "PORT": {
+      "default": 8888
+    },
+    "NUM_INSTANCES": {
+      "default": 1
+    }
+  },
+
+  "https": false,
+  "public": true,
+  "port": "${PORT}",
+  "numInstances": "${NUM_INSTANCES}",
+
+  "build": {
+    "repository": {
+      "url": "ssh://git@github.com/kevindrosendahl/example__hello-world-service-chaining.git",
+      "commit": "f1e0ec7719dfdbe6b3d1e27bb453da0ef1f634eb"
+    },
+    "language": "node6.9.4",
+    "cmd": "npm install"
+  },
+
+  "exec": {
+    "cmd": "node",
+    "args": [
+      "lib/PublicHelloService",
+      "-p",
+      "${PORT}"
+    ],
+    "environment": {
+      "PRIVATE_HELLO_SERVICE_URL": "http://PrivateHelloService.DemoSystem"
+    }
+  },
+
+  "resources": {
+    "instanceType": "t2.micro"
+  }
+}

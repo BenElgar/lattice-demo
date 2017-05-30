@@ -1,40 +1,17 @@
 {
-  "type": "ServiceCluster",
-  "name": "PrivateHelloService",
+  "type": "System",
+  "name": "DemoSystem",
 
-  "parameters": {
-    "PORT": {
-      "default": 9999
+  "subsystems": [
+    {
+      "$ref": {
+        "path": "PublicHelloService.json"
+      }
     },
-    "NUM_INSTANCES": {
-      "default": 1
+    {
+      "$ref": {
+        "path": "PrivateHelloService.json"
+      }
     }
-  },
-
-  "https": false,
-  "public": true,
-  "port": "${PORT}",
-  "numInstances": "${NUM_INSTANCES}",
-
-  "build": {
-    "repository": {
-      "url": "ssh://git@github.com/kevindrosendahl/example__hello-world-service-chaining.git",
-      "commit": "f1e0ec7719dfdbe6b3d1e27bb453da0ef1f634eb"
-    },
-    "language": "node6.9.4",
-    "cmd": "npm install"
-  },
-
-  "exec": {
-    "cmd": "node",
-    "args": [
-      "lib/PrivateHelloService",
-      "-p",
-      "${PORT}"
-    ]
-  },
-
-  "resources": {
-    "instanceType": "t2.micro"
-  }
+  ]
 }
