@@ -1,7 +1,4 @@
 {
-  "type": "ServiceCluster",
-  "name": "PublicHelloService",
-
   "parameters": {
     "PORT": {
       "default": 8888
@@ -11,10 +8,13 @@
     }
   },
 
+  "type": "ServiceCluster",
+  "name": "PublicHelloService",
+
   "https": false,
   "public": true,
+  "load_balanced": true,
   "port": "${PORT}",
-  "numInstances": "${NUM_INSTANCES}",
 
   "build": {
     "repository": {
@@ -37,8 +37,13 @@
     }
   },
 
+  "health_check": {
+    "path": "/status"
+  },
+
   "resources": {
-    "instanceType": "t2.micro"
+    "instance_type": "t2.micro",
+    "num_instances": "${NUM_INSTANCES}"
   }
 }
 
