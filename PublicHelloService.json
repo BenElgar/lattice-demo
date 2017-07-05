@@ -33,7 +33,7 @@
       "${PORT}"
     ],
     "environment": {
-      "PRIVATE_HELLO_SERVICE_URL": "http://PrivateHelloService.DemoSystem"
+      "PRIVATE_HELLO_SERVICE_URL": "http://PrivateHelloService"
     }
   },
 
