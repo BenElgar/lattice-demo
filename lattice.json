@@ -6,6 +6,9 @@
     {
       "$ref": {
         "path": "PublicHelloService.json"
+      },
+      "parameters": {
+        "NUM_INSTANCES": 2
       }
     },
     {
